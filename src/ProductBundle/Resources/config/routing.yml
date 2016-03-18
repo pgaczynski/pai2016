@@ -1,0 +1,18 @@
+product_homepage:
+    path:     /product
+    defaults: { _controller: ProductBundle:Default:index }
+product_add:
+  path: /product/add
+  defaults: { _controller: ProductBundle:Default:add }
+product_edit:
+  path: /product/edit/{id}
+  defaults: { _controller: ProductBundle:Default:edit }
+product_delete:
+  path: /product/delete/{id}
+  defaults: { _controller: ProductBundle:Default:delete }
+product_buy:
+  path: /product/buy/{id}
+  defaults: { _controller: ProductBundle:Default:buy }
+product_buy_stories:
+  path: /product/buy_stories
+  defaults: { _controller: ProductBundle:Default:showHistory }

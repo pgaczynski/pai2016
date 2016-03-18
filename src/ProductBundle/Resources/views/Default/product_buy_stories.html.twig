@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Price per 1</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+        {% for p in history %}
+            <tr>
+                <td>{{ p.product.name }}</td>
+                <td>{{ p.product.price }}</td>
+                <td>{{ p.amount }}</td>
+                <td>{{ p.date.format('Y-m-d H:i') }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ path('product_homepage') }}">Cancel</a>
+{% endblock %}
